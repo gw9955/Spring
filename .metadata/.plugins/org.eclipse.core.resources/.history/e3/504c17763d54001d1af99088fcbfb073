@@ -1,0 +1,10 @@
+package kr.or.ddit.Controller;
+
+import org.springframework.stereotype.Controller;
+
+@Controller
+public class HomeController {
+	/* 1. void 타입
+	 
+	 */
+}

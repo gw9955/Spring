@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="product">
+	<!-- PRODUCT 테이블에 insert -->
+	<insert id="insert" parameterType="kr.or.ddit.vo.ProductVO">
+		INSERT INTO PRODUCT(
+			  PRODUCT_ID
+			, PNAME
+			, UNIT_PRICE
+			, DESCRIPTION
+			, MANUFACTURER
+			, CATEGORY
+			, UNITS_IN_STOCK
+			, CONDITION) 
+		VALUES(#{productId}
+			, #{pname}
+			, #{unitPrice}
+			, #{description}
+			, #{manufacturer}
+			, #{category}
+			, #{unitInStock}
+			, #{condition}
+			)
+	</insert>
+	
+	<!-- 상품 목록 -->
+	<select id="list" resultType="productVO">
+		SELECT PRODUCT_ID, PNAME, UNIT_PRICE, DESCRIPTION, MANUFACTURER
+			, CATEGORY, UNITS_IN_STOCK, CONDITION
+		FROM PRODUCT
+		ORDER BY PRODUCT_ID DESC
+	</select>
+	
+	 <!-- 책 상세보기
+ 		select 태그는 조회(select) 쿼리를 실행하기 위한 mybatis 태그.
+ 		parameterType(book_SQL.xml로 들어온다) : bookVO 타입
+ 		resultType(bookDAO로 간다) : bookVO 타입
+ 	 -->
+ 	 <!-- bookVO(들어오는거) => {"bookId":"1","title":"","category":"","price":0,"insertDate":""} -->
+ 	 <!-- bookVO(나가는거) => {"bookId":"1","title":"개똥이 월드","category":"소설"
+ 	 						,"price":10000,"insertDate":"212/10/21"} -->
+ 	<select id="select_detail" parameterType="bookVO" resultType="bookVO">
+ 		SELECT BOOK_ID, TITLE, CATEGORY, PRICE, INSERT_DATE
+		FROM BOOK
+		WHERE BOOK_ID = #{bookId}
+ 	</select>
+</mapper>

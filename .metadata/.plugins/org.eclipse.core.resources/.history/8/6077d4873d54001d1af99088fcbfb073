@@ -1,0 +1,16 @@
+package kr.or.ddit.Controller;
+
+import org.springframework.stereotype.Controller;
+
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
+@Controller
+public class HomeController {
+	/* 1. void 타입
+	 호출하는 URL과 동일한 뷰 이름을 나타낸다
+	 */
+	public void home0101() {
+		log.info("home0101에 왔다");
+	}
+}
