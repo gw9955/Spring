@@ -13,30 +13,36 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="delete"/>
+		<item key="selection" value="attachVOL"/>
 		<list key="findhistory">
-			<item value="delete"/>
-			<item value="unitInStock"/>
-			<item value="jackson-databind"/>
-			<item value="jackson"/>
-			<item value="upda"/>
-			<item value="up"/>
-			<item value="detail"/>
-			<item value="de"/>
+			<item value="attachVOL"/>
+			<item value="int seq"/>
+			<item value="MultipartFile"/>
+			<item value="uploadFolder"/>
+			<item value="check"/>
+			<item value="UUID"/>
+			<item value="picture"/>
+			<item value="checkAddProduct"/>
+			<item value="등록"/>
+			<item value="pro"/>
 			<item value="unit"/>
-			<item value="form"/>
-			<item value="add"/>
-			<item value="unitsInStock"/>
-			<item value="\"/>
-			<item value="j"/>
-			<item value="un"/>
+			<item value="list"/>
+			<item value="book"/>
+			<item value="product"/>
+			<item value="produ"/>
 		</list>
 		<list key="replacehistory">
+			<item value="/"/>
+			<item value="src=&quot;/resources/sbadmin2/img"/>
+			<item value="src=&quot;/resources/sbadmin2/js"/>
+			<item value="src=&quot;/resources/sbadmin2/vendor"/>
+			<item value="href=&quot;/resources/sbadmin2/css"/>
+			<item value="href=&quot;/resources/sbadmin2/vendor"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
-		<item key="DIALOG_X_ORIGIN" value="743"/>
-		<item key="DIALOG_Y_ORIGIN" value="263"/>
+		<item key="DIALOG_X_ORIGIN" value="963"/>
+		<item key="DIALOG_Y_ORIGIN" value="176"/>
 		<item key="DIALOG_WIDTH" value="288"/>
 		<item key="DIALOG_HEIGHT" value="391"/>
 		<item key="DIALOG_FONT_NAME" value="1|맑은 고딕|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕"/>

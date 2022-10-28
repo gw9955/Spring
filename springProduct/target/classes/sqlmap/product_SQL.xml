@@ -61,4 +61,31 @@
  		DELETE FROM PRODUCT
 		WHERE   PRODUCT_ID = #{productId}
  	</delete>
+ 	
+ 	<!-- CART 테이블에 insert 
+ 	들어오는것 : CartVO
+ 	나가는것 : 생략(insert/update/delete는 resultType="int"를 생략)
+ 	-->
+ 	<insert id="insertCart">
+ 		INSERT INTO CART(CART_ID, NAME, SHIPPING_DATE, COUNTRY, ZIP_CODE, 
+ 		ADDRESS_NAME, ADDRESS_DETAIL, REGIST_DT) 
+		VALUES(#{cartId},#{name},#{shippingDate},#{country},#{zipCode},
+		#{addressName},#{addressDetail},sysdate)
+ 	</insert>
+ 	
+ 	<!-- ATTACH 테이블에  insert
+ 	들어오는것 : List<AttachVO>
+ 	나가는것 : 생략
+ 	INTO ATTACH VALUES(1,'P1238','1',2,'jpeg',sysdate)
+	INTO ATTACH VALUES(2,'P1238','2',2,'jpeg',sysdate)
+	INTO ATTACH VALUES(3,'P1238','3',2,'jpeg',sysdate)
+	SELECT * FROM SYS.DUAL
+ 	 -->
+ 	 <update id="insertAttach" parameterType="java.util.List">
+ 	 	<foreach collection="list" item="attachVO" open="INSERT ALL "
+ 	 		close="SELECT * FROM SYS.DUAL" separator=" ">
+ 	 		INTO ATTACH VALUES(#{attachVO.seq},#{attachVO.tid}
+ 	 		,#{attachVO.attachName},#{attachVO.attachSize},#{attachVO.attachType},sysdate)
+ 	 	</foreach>
+ 	 </update>
 </mapper>

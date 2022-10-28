@@ -1,8 +1,0 @@
-package kr.or.ddit.service.impl;
-
-import kr.or.ddit.vo.BookVO;
-
-public interface BookService {
-	// BOOK 테이블에 insert
-	public int insert(BookVO bookVO);
-}
