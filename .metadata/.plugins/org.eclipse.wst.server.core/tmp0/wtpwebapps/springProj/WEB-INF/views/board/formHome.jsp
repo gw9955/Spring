@@ -1,5 +1,5 @@
 <%@ page contentType="text/html; charset=UTF-8"%>
-<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -18,8 +18,8 @@
 	</form>
 	<hr />
 	<h2>Params 매핑</h2>
-	<p><a href="/board/get?register">Register</a></p>
-	<p><a href="/board/get?modify">Modify</a></p>
+	<p><a href="/board/get?register">Register</a></p>	
+	<p><a href="/board/get?modify">Modify</a></p>	
 	<p>
 		<form action="/board/post" method="post">
 			<button type="submit" name="register">Register</button>
@@ -32,3 +32,11 @@
 	</p>
 </body>
 </html>
+
+
+
+
+
+
+
+

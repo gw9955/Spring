@@ -13,23 +13,23 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="attachVOL"/>
+		<item key="selection" value=""/>
 		<list key="findhistory">
-			<item value="attachVOL"/>
-			<item value="int seq"/>
-			<item value="MultipartFile"/>
-			<item value="uploadFolder"/>
-			<item value="check"/>
-			<item value="UUID"/>
-			<item value="picture"/>
-			<item value="checkAddProduct"/>
-			<item value="등록"/>
-			<item value="pro"/>
-			<item value="unit"/>
-			<item value="list"/>
-			<item value="book"/>
-			<item value="product"/>
-			<item value="produ"/>
+			<item value="attachVOList"/>
+			<item value="hiber"/>
+			<item value="hibernate"/>
+			<item value="ojdbc"/>
+			<item value="commons-dbcp2"/>
+			<item value="spring-jdbc"/>
+			<item value="data"/>
+			<item value="INSERT ALL        INTO ATTACH VALUES"/>
+			<item value="tid"/>
+			<item value="form"/>
+			<item value="ㅇㅁㅅㅁ"/>
+			<item value="칼파테크"/>
+			<item value="bu"/>
+			<item value="button"/>
+			<item value="운영"/>
 		</list>
 		<list key="replacehistory">
 			<item value="/"/>
@@ -41,8 +41,8 @@
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
-		<item key="DIALOG_X_ORIGIN" value="963"/>
-		<item key="DIALOG_Y_ORIGIN" value="176"/>
+		<item key="DIALOG_X_ORIGIN" value="1205"/>
+		<item key="DIALOG_Y_ORIGIN" value="123"/>
 		<item key="DIALOG_WIDTH" value="288"/>
 		<item key="DIALOG_HEIGHT" value="391"/>
 		<item key="DIALOG_FONT_NAME" value="1|맑은 고딕|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕"/>

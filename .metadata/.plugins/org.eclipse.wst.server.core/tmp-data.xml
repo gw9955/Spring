@@ -2,5 +2,6 @@
 <temp-directories>
   <temp-directory age="0" key="Tomcat v8.5 Server at localhost (springProduct)" path="tmp1" recycle="false"/>
   <temp-directory age="0" key="Tomcat v8.5 Server at localhost (springBookMarket)" path="tmp2" recycle="false"/>
+  <temp-directory age="0" key="Tomcat v8.5 Server at localhost (springModule)" path="tmp3" recycle="false"/>
   <temp-directory age="0" key="Tomcat v8.5 Server at localhost" path="tmp0" recycle="false"/>
 </temp-directories>

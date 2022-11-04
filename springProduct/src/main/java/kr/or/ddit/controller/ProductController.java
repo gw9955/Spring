@@ -4,6 +4,7 @@ import java.io.UnsupportedEncodingException;
 import java.net.URLDecoder;
 import java.net.URLEncoder;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -16,9 +17,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import kr.or.ddit.service.ProductService;
@@ -74,7 +77,7 @@ public class ProductController {
 		log.info("result : " + result);
 		
 		if(result > 0) {//입력 성공
-			mav.setViewName("redirect:/detail?productId=" + productVO.getProductId());
+			mav.setViewName("redirect:/product?productId=" + productVO.getProductId());
 		}else {//입력 실패
 			mav.setViewName("redirect:/addproduct");
 		}
@@ -86,8 +89,8 @@ public class ProductController {
 	//요청URI : http://localhost:8090/detail?productId=P1236
 	//요청URL : http://localhost:8090/detail
 	//요청파라미터 : productId=P1236
-	@RequestMapping(value = "/detail", method = RequestMethod.GET)
-	public ModelAndView detail(ModelAndView mav, ProductVO productVO) {
+	@RequestMapping(value = "/product", method = RequestMethod.GET)
+	public ModelAndView product(ModelAndView mav, ProductVO productVO) {
 //		ProductVO [productId=P1236, pname=null, unitPrice=0, description=null, 
 		//manufacturer=null, category=null, unitInStock=0, condition=null, filename=null, quantity=0]
 		log.info("productVO : " + productVO.toString());
@@ -126,7 +129,7 @@ public class ProductController {
 		int result = this.productService.update(productVO); 
 		
 		if(result > 0) {	//변경 성공
-			mav.setViewName("redirect:/detail?productId=" + productVO.getProductId());						
+			mav.setViewName("redirect:/product?productId=" + productVO.getProductId());						
 		}else {//변경 없음
 			mav.setViewName("redirect:/update?productId=" + productVO.getProductId());
 		}
@@ -151,7 +154,7 @@ public class ProductController {
 		if(result > 0) { // 삭제 성공	
 			mav.setViewName("redirect:/products");
 		}else {//삭제 실패
-			mav.setViewName("redirect:/detail?productId=" + productId);
+			mav.setViewName("redirect:/product?productId=" + productId);
 		}
 		
 		return mav;
@@ -169,7 +172,7 @@ public class ProductController {
 		log.info("productVO  " + productVO.toString());
 		//장바구니에 넣을 상품이 없다면..
 		if(productId==null) {
-			return "redirect:/detail?productId="+productId;
+			return "redirect:/product?productId="+productId;
 		}		
 		
 		//장바구니에 넣을 상품을 검색해보자
@@ -220,7 +223,7 @@ public class ProductController {
 			log.info("pv : " + pv.toString());
 		}
 		
-		return "redirect:/detail?productId="+productId;
+		return "redirect:/product?productId="+productId;
 	}
 	
 	//요청URI : /cart
@@ -432,6 +435,20 @@ public class ProductController {
 	public String checkOutCancelled() {
 		//forwarding
 		return "product/checkOutCancelled";
+	}
+	
+	// PRODUCT테이블의 기본키 자동 생성
+	// JSON 데이터로 return : {"productId":"P1236"}
+	@ResponseBody
+	@PostMapping("/getProductId")
+	public Map<String,String> getProductId() {
+		Map<String,String> map = new HashMap<String, String>();
+		
+		String productId = this.productService.getProductId();
+		
+		map.put("productId", productId);
+		
+		return map;
 	}
 }
 

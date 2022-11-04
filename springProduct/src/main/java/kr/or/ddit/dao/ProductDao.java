@@ -53,9 +53,15 @@ public class ProductDao {
 		return this.sqlSessionTemplate.insert("product.insertCart",cartVO);
 	}
 	
-	// ATTACH 테이블에 다중 update
+	// ATTACH 테이블에 다중 insert
 	public int insertAttach(List<AttachVO> attachVOList) {
 		return this.sqlSessionTemplate.insert("product.insertAttach",attachVOList);
+	}
+	
+	// PRODUCT테이블의 기본키 자동 생성
+	public String getProductId() {
+		// 1행 select, 파라미터 없다
+		return this.sqlSessionTemplate.selectOne("product.getProductId");
 	}
 }
 
