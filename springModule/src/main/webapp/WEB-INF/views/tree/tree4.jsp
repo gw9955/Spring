@@ -102,7 +102,6 @@ fieldset {
 						<li><a href="#">${row.orgname}</a>
 							<ul>
 								<li><a href="#">경영관리실</a></li>
-						
 								<li><a href="#">경영전략실</a></li>
 								<li><a href="#">글로벌사업실</a></li>
 							</ul>

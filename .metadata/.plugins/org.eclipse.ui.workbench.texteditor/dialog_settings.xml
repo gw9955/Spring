@@ -13,8 +13,15 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value=""/>
+		<item key="selection" value="userPw"/>
 		<list key="findhistory">
+			<item value="userPw"/>
+			<item value="userP"/>
+			<item value="user"/>
+			<item value="register"/>
+			<item value="imag"/>
+			<item value="download"/>
+			<item value="상품관리"/>
 			<item value="attachVOList"/>
 			<item value="hiber"/>
 			<item value="hibernate"/>
@@ -23,13 +30,6 @@
 			<item value="spring-jdbc"/>
 			<item value="data"/>
 			<item value="INSERT ALL        INTO ATTACH VALUES"/>
-			<item value="tid"/>
-			<item value="form"/>
-			<item value="ㅇㅁㅅㅁ"/>
-			<item value="칼파테크"/>
-			<item value="bu"/>
-			<item value="button"/>
-			<item value="운영"/>
 		</list>
 		<list key="replacehistory">
 			<item value="/"/>

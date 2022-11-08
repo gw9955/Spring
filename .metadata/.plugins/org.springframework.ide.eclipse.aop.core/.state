@@ -4,4 +4,5 @@
 <aop-project name="springProj"/>
 <aop-project name="springProduct"/>
 <aop-project name="springBookMarket"/>
+<aop-project name="springProj (2)"/>
 </aop-reference-model>
